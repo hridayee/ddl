@@ -1,0 +1,44 @@
+
+SQL*Plus: Release 18.0.0.0.0 - Production on Mon Feb 3 13:02:17 2025
+Version 18.4.0.0.0
+
+Copyright (c) 1982, 2018, Oracle.  All rights reserved.
+
+Enter user-name: system
+Enter password:
+Last Successful login time: Mon Feb 03 2025 12:48:30 +05:30
+
+Connected to:
+Oracle Database 18c Express Edition Release 18.0.0.0.0 - Production
+Version 18.4.0.0.0
+
+SQL> creat table std(id number,name varchar(10),contact varchar(10));
+SP2-0734: unknown command beginning "creat tabl..." - rest of line ignored.
+SQL> alter table std modify name varchar(100);
+
+Table altered.
+
+SQL> alter table std add primary key(id);
+
+Table altered.
+
+SQL> alter table std drop primary key;
+
+Table altered.
+
+SQL> alter table std rename to std1;
+
+Table altered.
+
+SQL> desc std1;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ID                                                 NUMBER(38)
+ NAME                                               VARCHAR2(100)
+ CONTACT                                            VARCHAR2(10)
+
+SQL> alter table std1 drop column contact;
+
+Table altered.
+
+SQL> alter table std1 drop column contact;
